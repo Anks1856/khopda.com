@@ -22,4 +22,5 @@ urlpatterns = [
     path('',views.home,name='home'),
     path('account/',include('account.urls')),
     path('poetry/',include('poetry.urls')),
+    path('quote/',include('quotes.urls')),
 ]
