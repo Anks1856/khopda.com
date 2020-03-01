@@ -31,6 +31,8 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'quotes.apps.QuotesConfig',
+    'poetry.apps.PoetryConfig',
     'landing.apps.LandingConfig',
     'django.contrib.admin',
     'django.contrib.auth',
