@@ -4,7 +4,7 @@ from django.http import HttpResponse
 # Create your views here.
 def login(request):
     # return HttpResponse("<h1>Login</h1>")
-    return render(request, '/account/templates/account/home.html')
+    return render(request, 'account/login.html')
 
 def signin(request):
     return HttpResponse("<h1>signin</h1>")

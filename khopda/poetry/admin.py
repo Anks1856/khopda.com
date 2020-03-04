@@ -1,4 +1,4 @@
 from django.contrib import admin
-from .models import poetry
+from .models import Poetry
 # Register your models here.
-admin.site.register(poetry)
+admin.site.register(Poetry)

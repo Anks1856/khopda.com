@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-
+from .models import Quotes
 # Create your views here.
 def quote(request):
-    return HttpResponse("<h1>Quotes</h1>")
+    quotes = Quotes.objects.all()
+    return render(request,'quotes/Quotes.html',{'quotes':quotes})
