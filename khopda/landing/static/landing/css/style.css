@@ -11,9 +11,7 @@ ul li {
 nav .navbar-nav li a {
   color: brown;
 }
-.container {
-  color: blueviolet;
-}
+
 .carousel {
   margin: 45px;
 }
@@ -60,10 +58,20 @@ a {
   padding: 0px;
   margin: 2px;
   direction: none;
-  color: aqua;
 }
 /* social media css end */
 /* post */
 .card{
   margin-top: 30px;
 }
+ p{
+             color:black;
+             font-size: 20px;
+              font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+
+ h5 {
+      color:black;
+      font-size: 30px;
+      font-family: fantasy;
+    }
