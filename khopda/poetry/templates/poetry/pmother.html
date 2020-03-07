@@ -15,8 +15,8 @@
         <div class="row">
             {% for poetry in poetries %}
             {% if poetry.category == "MOM" %}
-            <div class="col-sm-3">
-                <div class="shadow p-3 mb-3 bg-white rounded"><p>{{poetry.poetry}}</p></div>
+            <div class="col-sm-4">
+                <div class="shadow p-3 mb-3 bg-white rounded"><pre><p>{{poetry.poetry}}</p></pre></div>
             </div>
             {% endif %}
             {% endfor %}
