@@ -26,3 +26,9 @@ class Relationship(models.Model):
 
     def __str__(self):
         return self.title
+
+    def front(self):
+        return self.body[:250]
+
+    def contant(self):
+        return self.body[250:]

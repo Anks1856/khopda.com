@@ -1,25 +1,19 @@
-<!doctype html>
-<html lang="en">
+{% extends 'landing/base.html' %}
 {% load static %}
-<head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-  <link rel="stylesheet" href="{% static 'landing/css/s.css' %}">
-  <title>Hello, world!</title>
-  <style>
-    .card {
-      margin-top: 30px;
-    }
+{% block title %} Poetry {% endblock  %}
 
-  </style>
-</head>
+{% block css %}
+<link href="{%static 'landing/css/main.css'%}" rel="stylesheet">
+<link href="{%static 'landing/css/font.css'%}" rel="stylesheet">
+<style>
+.card{
+margin-top:30px;
+}
+</style>
+{% endblock %}
 
-<body>
+{% block body %}
   <div class="container">
     <div class="card mb-3" style="max-width: 1200px;">
       <div class="row no-gutters">
@@ -28,61 +22,14 @@
         </div>
         <div class="col-md-8">
           <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-              content. This content is a little bit longer.</p>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            <h5 class="card-title">{{detail_post.title}}</h5>
+            <p class="card-text">{{detail_post.front}}</p>
+            <p class="card-text"><small class="text-muted">{{detail_post.pub_date}}</small></p>
           </div>
         </div>
       </div>
     </div>
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet ad omnis quis possimus. Alias architecto dolor,
-      qui voluptas nobis laborum vitae neque! Corporis facilis aliquid cumque pariatur dolorem, maiores facere maxime
-      dolores officiis architecto fuga qui suscipit ipsam illo eaque vel sit vero? Repudiandae rerum sint tempora
-      nesciunt optio quae maiores. A aut eveniet reiciendis deleniti, et maiores officiis praesentium quisquam vel sed
-      tempora velit laudantium sint deserunt pariatur eaque labore autem delectus dicta dolorem id. Sequi sint officia
-      illo sit quae similique aliquam laudantium velit accusamus labore, repudiandae ipsum laboriosam porro eveniet modi
-      optio consequatur. Excepturi dolor beatae culpa praesentium deserunt sequi eos inventore enim unde? Praesentium
-      architecto autem assumenda maxime! Soluta iste accusamus non alias cupiditate ex perspiciatis obcaecati totam,
-      earum explicabo odio maxime hic. Debitis iure ut molestiae, placeat voluptatibus odio rerum in eligendi.
-      Repudiandae dolor laboriosam vel dignissimos architecto incidunt tempore tempora voluptate velit hic cum,
-      consequuntur porro molestias, sit, praesentium fugiat cupiditate quas nostrum. Natus nemo, harum velit quaerat rem
-      animi, odio earum, placeat in iusto sunt eligendi fugiat eius magnam dignissimos enim vero voluptate deleniti
-      reiciendis quidem provident quae perferendis ullam sint! Amet quia officiis repellendus quidem rem quasi magni sit
-      ipsum, beatae, cum voluptate. Quos earum dolor, quidem voluptatibus vero eius totam exercitationem incidunt
-      eveniet laudantium non similique commodi nisi corporis quae in ratione? Consequatur modi quae aliquam! Tempora
-      expedita odit harum, consectetur rerum ea perspiciatis eaque iure fuga, nostrum iste, necessitatibus quidem? Iure
-      adipisci ducimus quidem perferendis, reiciendis rem iste assumenda sequi tenetur, incidunt ea voluptas minus
-      expedita! Repellat, nemo a iure voluptate modi sit rerum tempore ad provident, quidem consectetur excepturi! Aut
-      voluptatum et ratione consequatur commodi repellat hic, non pariatur corrupti temporibus velit dolor earum dolorem
-      animi optio autem minima alias molestiae sint? Officiis pariatur ipsa aut aspernatur. Porro, illo facilis?
-      Adipisci non laboriosam quisquam soluta perspiciatis perferendis, odio ullam voluptatibus enim accusantium
-      veritatis hic fugit rerum sapiente possimus in, nisi cum? Saepe ipsum eos reprehenderit animi fugit incidunt
-      quibusdam a soluta possimus laudantium rerum nesciunt facilis eligendi maiores alias voluptates consequatur vel,
-      exercitationem corporis blanditiis rem odit illum. Obcaecati incidunt eveniet doloribus consectetur. Quasi ut
-      velit, itaque numquam officiis delectus quae nam unde quas cumque ullam corrupti assumenda impedit? Eligendi
-      debitis voluptas magnam praesentium laboriosam alias. Suscipit hic non voluptatem natus corporis repudiandae
-      necessitatibus, animi maxime quaerat eveniet tempore nam iure ut sit ipsum eaque debitis at nobis accusamus, amet,
-      cupiditate laudantium? Ducimus, molestiae id tenetur hic accusamus iure et perferendis numquam. Provident aliquid
-      dolorem hic, nobis, non doloremque illo perspiciatis harum officiis natus ex consequatur inventore atque quia
-      beatae ut? Necessitatibus modi culpa molestiae, autem nobis qui? Quo incidunt similique recusandae delectus, ipsa
-      dolorem tenetur iusto, porro fugiat id, totam nulla soluta illo aut sint iure. Assumenda necessitatibus
-      perferendis animi, atque optio nihil quisquam minima! Velit, assumenda. Velit, incidunt nisi quis, recusandae
-      eligendi accusantium quam itaque magni voluptates assumenda at officiis hic aliquam debitis enim maxime obcaecati,
-      eaque quasi reiciendis voluptatum. Molestiae ratione odio eligendi eum omnis odit!</p>
+    <p>....{{detail_post.contant}}</p>
   </div>
 
-  <!-- Optional JavaScript -->
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-    crossorigin="anonymous"></script>
-</body>
-
-</html>
+{% endblock %}
