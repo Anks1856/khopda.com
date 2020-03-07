@@ -1,0 +1,28 @@
+{% extends 'landing/base.html' %}
+{% load static %}
+
+{% block title %} Poetry {% endblock  %}
+
+{% block css %}
+<link href="{%static 'landing/css/main.css'%}" rel="stylesheet">
+<link href="{%static 'landing/css/font.css'%}" rel="stylesheet">
+
+{% endblock %}
+
+{% block body %}
+
+<div class="container">
+        <div class="row">
+            {% for poetry in poetries %}
+            {% if poetry.category == "ATD" %}
+            <div class="col-sm-3">
+                <div class="shadow p-3 mb-3 bg-white rounded"><p>{{poetry.poetry}}</p></div>
+            </div>
+            {% endif %}
+            {% endfor %}
+
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

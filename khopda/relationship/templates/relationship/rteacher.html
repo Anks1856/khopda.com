@@ -1,0 +1,30 @@
+{% extends 'landing/base.html' %}
+{% load static %}
+
+{% block title %} Relationship {% endblock  %}
+{% block css %}
+<link href="{%static 'landing/css/main.css'%}" rel="stylesheet">
+<link href="{%static 'landing/css/font.css'%}" rel="stylesheet">
+{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div class="row">
+          {% for rel in relations %}
+          {% if rel.category == "TCR" %}
+          <div class="col-md-4">
+            <div class="card">
+              <img src="{{ rel.image.url }}" class="card-img-top" alt="...">
+              <div class="card-body">
+                <a href="/relationship/{{rel.id}}"><h5 class="card-title">{{rel.title}}</h5></a>
+                <p class="card-text">{{rel.front}}...<a
+                        href="/relationship/{{rel.id}}">Continue Reading</a></p>
+                <p class="card-text"><small class="text-muted">{{rel.pub_date}}</small></p>
+              </div>
+            </div>
+          </div>
+          {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+{% endblock %}
